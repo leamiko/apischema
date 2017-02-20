@@ -1,9 +1,22 @@
 {
   "name": "apischema",
-  "version": "0.0.1",
   "description": "api schema",
-  "author": "wangxiang <wxnet2013@gmail.com>",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "version": "0.0.1",
+  "author": {
+      "name": "wxnet2013",
+      "url": "https://github.com/wxnet2013"
+  },
+  "contributors": [
+      {
+        "name": "wxnet2013",
+        "url": "https://github.com/wxnet2013"
+      }
+  ],
+  "homepage": "https://github.com/wxnet2013/apischema",
+  "repository": {
+      "type": "git",
+      "url": "git@github.com:wxnet2013/apischema.git"
+  },
+  "main": "index.js",
+  "dependencies": {}
 }
