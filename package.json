@@ -1,0 +1,9 @@
+{
+  "name": "apischema",
+  "version": "0.0.1",
+  "description": "api schema",
+  "author": "wangxiang <wxnet2013@gmail.com>",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
