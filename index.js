@@ -20,7 +20,7 @@ const getType = (value) => {
 };
 
 export default (config) => {
-  io = config.http;
+  const io = config.http;
   return {
     define(url, schema = {}, method = 'get') {
       return (params) => {
