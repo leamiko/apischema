@@ -1,7 +1,7 @@
 {
   "name": "apischema",
   "description": "api schema",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
       "name": "wxnet2013",
       "url": "https://github.com/wxnet2013"
@@ -18,5 +18,7 @@
       "url": "git@github.com:wxnet2013/apischema.git"
   },
   "main": "index.js",
-  "dependencies": {}
+  "dependencies": {
+    "querystring": "^0.2.0"
+  }
 }
