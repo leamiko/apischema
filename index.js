@@ -27,7 +27,7 @@ export default (config) => {
   return {
     combineUrl(method, url, params) {
       // 替换path参数
-      let combineUrl = url.replace(/\$\{([a-zA-Z]*)\}/g, ($1, $2) => {
+      let combineUrl = url.replace(/\{([a-zA-Z]*)\}/g, ($1, $2) => {
         console.log($1, $2);
         return params[$2];
       });
