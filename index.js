@@ -62,5 +62,11 @@ export default (config) => {
     post(url, schema) {
       return this.define(url, schema, 'post');
     },
+    delete(url, schema) {
+      return this.define(url, schema, 'delete');
+    },
+    put(url, schema) {
+      return this.define(url, schema, 'put');
+    },
   };
 };
