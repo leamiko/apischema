@@ -1,7 +1,7 @@
 {
   "name": "apischema",
   "description": "api schema",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
       "name": "wxnet2013",
       "url": "https://github.com/wxnet2013"
@@ -20,5 +20,11 @@
   "main": "index.js",
   "dependencies": {
     "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "babel-eslint": "^6.1.2",
+    "eslint-plugin-import": "^1.8.1"
   }
 }

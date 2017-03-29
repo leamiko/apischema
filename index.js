@@ -11,15 +11,20 @@ import { encode } from 'querystring';
 const schemaTypes = {
   number: Number,
   string: String,
-  // 其它类型后续扩展
+  array: Array,
+  boolean: Boolean,
 };
 
-// 临时测试方法
+if (!Array.isArray) {
+  Array.isArray = (obj) => Object.prototype.toString.call(obj) === '[object Array]';
+}
+
 const getType = (value) => {
-  let type = '';
-  if (typeof value === 'string') type = 'string';
-  if (typeof value === 'number') type = 'number';
-  return type;
+  if (typeof value === 'number') return 'number';
+  if (typeof value === 'string') return 'string';
+  if (typeof value === 'boolean') return 'boolean';
+  if (Array.isArray(value)) return 'array';
+  return '';
 };
 
 export default (config) => {
@@ -41,7 +46,7 @@ export default (config) => {
     define(url, schema = {}, method = 'get') {
       return (params) => {
         // 最终发送给接口的参数
-        let sendParams = {};
+        const sendParams = {};
         // 验证请求参数的合法性
         Object.keys(schema).forEach((param) => {
           if (schema[param].required && !params[param]) throw new TypeError(`缺少参数：请添加${param}参数`);
@@ -49,7 +54,7 @@ export default (config) => {
             throw new TypeError(`类型错误：参数${param}类型错误`);
           }
           // 如果只是用于接口URL中的参数，则不加入进最终发送给接口的参数
-          if(!schema[param].urlOnly) {
+          if (!schema[param].urlOnly) {
             sendParams[param] = params[param];
           }
         });
