@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const assert = require('chai').assert;
-import pathparams from '../src/pathparams';
+import pathparams from '../lib/pathparams';
 
 describe('Path', () => {
   describe('#params', () => {

@@ -1,7 +1,7 @@
 {
   "name": "apischema",
   "description": "api schema",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": {
     "name": "wxnet2013",
     "url": "https://github.com/wxnet2013"
@@ -17,10 +17,9 @@
     "type": "git",
     "url": "git@github.com:wxnet2013/apischema.git"
   },
-  "main": "index.js",
+  "main": "lib/apischema.js",
   "files": [
-    "index.js",
-    "src"
+    "lib"
   ],
   "scripts": {
     "dist": "webpack",

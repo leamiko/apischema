@@ -11,3 +11,9 @@ getCategorys({ page: 1, type: 1 }).then((json) => {
   log(json);  
 });
 ```
+
+## Dev
+```
+$ npm i
+$ npm test
+```

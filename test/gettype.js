@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const assert = require('chai').assert;
-import getType from '../src/gettype';
+import getType from '../lib/gettype';
 
 describe('getType', () => {
   describe('#getType()', () => {

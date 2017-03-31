@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const assert = require('chai').assert;
-import combinequery from '../src/combinequery';
+import combinequery from '../lib/combinequery';
 
 describe('Url', () => {
   describe('#combinequery()', () => {

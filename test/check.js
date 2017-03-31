@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import check from '../src/check';
+import check from '../lib/check';
 const assert = require('chai').assert;
 
 describe('check', () => {
