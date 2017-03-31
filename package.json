@@ -1,30 +1,46 @@
 {
   "name": "apischema",
   "description": "api schema",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "author": {
-      "name": "wxnet2013",
-      "url": "https://github.com/wxnet2013"
+    "name": "wxnet2013",
+    "url": "https://github.com/wxnet2013"
   },
   "contributors": [
-      {
-        "name": "wxnet2013",
-        "url": "https://github.com/wxnet2013"
-      }
+    {
+      "name": "wxnet2013",
+      "url": "https://github.com/wxnet2013"
+    }
   ],
   "homepage": "https://github.com/wxnet2013/apischema",
   "repository": {
-      "type": "git",
-      "url": "git@github.com:wxnet2013/apischema.git"
+    "type": "git",
+    "url": "git@github.com:wxnet2013/apischema.git"
   },
   "main": "index.js",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "dist": "webpack",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+  },
   "dependencies": {
+    "isarray": "^2.0.1",
     "querystring": "^0.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-es2015": "^6.24.0",
+    "chai": "^3.5.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb-base": "^3.0.1",
-    "babel-eslint": "^6.1.2",
-    "eslint-plugin-import": "^1.8.1"
+    "eslint-plugin-import": "^1.8.1",
+    "mocha": "^3.2.0",
+    "webpack": "^2.3.2"
   }
 }

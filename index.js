@@ -1,11 +1,3 @@
-/*
-  String Number Date Boolean Array
-  export const getCategorys = schema.define('', {
-    page: Number,
-    url: String,
-  });
-*/
-
 import { encode } from 'querystring';
 
 const schemaTypes = {
@@ -27,8 +19,12 @@ const getType = (value) => {
   return '';
 };
 
-export default (config) => {
+export const apischema = (config) => {
   const io = config.http;
+  // io.get => Promise
+  // io.post => Promise
+  // io.put => Promise
+  // io.delete => Promise
   return {
     combineUrl(method, url, params) {
       // 替换path参数
@@ -49,7 +45,8 @@ export default (config) => {
         const sendParams = {};
         // 验证请求参数的合法性
         Object.keys(schema).forEach((param) => {
-          if (schema[param].required && !params[param]) throw new TypeError(`缺少参数：请添加${param}参数`);
+          if (schema[param].required &&
+            params[param] === void 0) throw new TypeError(`缺少参数：请添加${param}参数`);
           if (schema[param].type !== schemaTypes[getType(params[param])]) {
             throw new TypeError(`类型错误：参数${param}类型错误`);
           }
