@@ -31,6 +31,11 @@ describe('check', () => {
           appid: '',
         });
       });
+      assert.doesNotThrow(() => {
+        check({
+          appid: { type: String, required: false },
+        }, {});
+      });
     });
   });
 });
