@@ -1,7 +1,8 @@
 module.exports = {
-  entry: './index.js',
+  entry: './lib/apischema.js',
   output: {
     filename: 'dist/apischema.js',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
