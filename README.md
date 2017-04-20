@@ -16,4 +16,5 @@ getCategorys({ page: 1, type: 1 }).then((json) => {
 ```
 $ npm i
 $ npm test
+$ npm run dist
 ```
