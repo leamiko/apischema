@@ -9,6 +9,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          plugins: ['transform-object-assign'],
+        },
       },
     ],
   },
