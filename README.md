@@ -7,7 +7,14 @@ export const getCategorys = schema.get('/api/getcategorys/{page}', {
   type: { type: Number, required: true },
 });
 
-getCategorys({ page: 1, type: 1 }).then((json) => {
+getCategorys({
+  page: 1,
+  type: 1
+}, {
+  headers: {
+    'X-Access-Token': 'djdjxjqi111',
+  },
+}).then((json) => {
   log(json);  
 });
 ```
